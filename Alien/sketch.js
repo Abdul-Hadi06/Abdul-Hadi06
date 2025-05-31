@@ -29,7 +29,7 @@ function draw() {
   moveAlien();
 }
 
-//Moving Starfield
+// Moving Starfield
 function backgroundSpace() {
   background(10, 10, 30);
   noStroke();
@@ -44,7 +44,7 @@ function backgroundSpace() {
   }
 }
 
-//Spaceship animation
+// Spaceship animation
 function moveSpaceships() {
   for (let ship of spaceships) {
     ship.x += ship.speed;
@@ -70,7 +70,7 @@ function drawSpaceship(x, y) {
   triangle(x - 10, y + 7, x + 10, y + 7, x, y + 20); // light beam
 }
 
-//Alien
+// Alien
 function drawAlien(x, y) {
   push();
   translate(x, y);
