@@ -1,7 +1,7 @@
 let angleOffset = 0; 
  
 function setup() { 
-  createCanvas(windowWidth, windowHeight); 
+  createCanvas(400, 400); 
   angleMode(DEGREES); 
   strokeWeight(2);
 } 

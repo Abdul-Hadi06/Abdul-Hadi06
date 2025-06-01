@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1000, 1000);
   textAlign(CENTER, CENTER);
 
   for (let i = 0; i < quote.length; i++) {
