@@ -1,4 +1,4 @@
-let data = [4.78, 1.51, 0.74, 0.6, 0.44, 0.43]; // 2025 Population in billions
+let data = [4.78, 1.51, 0.74, 0.6, 0.44, 0.43];
 let labels = ["Asia", "Africa", "Europe", "North America", "South America", "Oceania"];
 let animatedData = [];
 let targetData = [];
@@ -7,7 +7,7 @@ let easing = 0.1;
 let hoveredIndex = -1;
 
 function setup() {
-  createCanvas(800, 500);
+  createCanvas(windowWidth, windowHeight);
   colorMode(HSB);
   textFont("Helvetica");
 

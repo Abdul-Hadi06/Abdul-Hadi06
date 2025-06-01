@@ -2,7 +2,7 @@ let cols, rows;
 let cellWidth, cellHeight;
 
 function setup() {
-  createCanvas(600, 450);
+  createCanvas(600, 600);
   colorMode(HSB);
   cols = 20;
   rows = 20;
@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 15); // dark midnight gray
+  background(0, 0, 15);
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {

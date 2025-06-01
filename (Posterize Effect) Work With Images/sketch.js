@@ -7,9 +7,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 450);
+  createCanvas(windowWidth, windowHeight);
   posterImg = img.get();
-  posterizeImage(posterImg, 5); // You can try 4 or 6 too
+  posterizeImage(posterImg, 5);
   image(posterImg, 0, 0, width, height);
   noLoop();
 }
@@ -23,7 +23,6 @@ function posterizeImage(img, levels) {
       val = floor(val / 255 * levels) * (255 / levels);
       img.pixels[i + j] = val;
     }
-    // alpha channel (i + 3) stays the same
   }
 
   img.updatePixels();

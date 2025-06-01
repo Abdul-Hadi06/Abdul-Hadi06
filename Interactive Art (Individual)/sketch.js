@@ -6,7 +6,7 @@ let cloudX1, cloudX2;
 let stars = [];
 
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(1000, 900); 
   moonX = width - 100;
   moonY = 120;
   cloudX1 = -200;
@@ -40,7 +40,7 @@ function draw() {
   drawText();
 }
 
-// ----- Sky and Background -----
+// Sky and Background
 function drawNightSky() {
   for (let y = 0; y < height / 2; y++) {
     let inter = map(y, 0, height / 2, 0, 1);
@@ -61,7 +61,7 @@ function drawNightSky() {
   }
 }
 
-// ----- Moon -----
+// Moon
 function drawMoon() {
   noStroke();
   for (let r = 60; r > 30; r -= 5) {
@@ -76,7 +76,7 @@ function drawMoon() {
   ellipse(moonX + 5, moonY - 15, 7, 7);
 }
 
-// ----- Cloud -----
+// Cloud
 function drawCloud(x, y) {
   fill(255, 255, 255, 70);
   noStroke();
@@ -85,7 +85,7 @@ function drawCloud(x, y) {
   ellipse(x + 120, y, 120, 80);
 }
 
-// ----- University Building -----
+// University Building
 function drawUniversity() {
   // Base
   let baseY = height / 2;
@@ -127,7 +127,7 @@ function drawUniversity() {
   }
 }
 
-// ----- Ripples -----
+// Ripples
 function drawRipples() {
   for (let i = ripples.length - 1; i >= 0; i--) {
     let ripple = ripples[i];
@@ -143,7 +143,7 @@ function drawRipples() {
   }
 }
 
-// ----- Text Placeholder -----
+// Text Placeholder
 function drawText() {
   fill(200, 200, 255, 180);
   textAlign(CENTER);
@@ -151,7 +151,7 @@ function drawText() {
   text("University at Night - Click to change color", width / 2, height - 30);
 }
 
-// ----- Interactions -----
+// Interactions
 function mousePressed() {
   currentColorIndex = (currentColorIndex + 1) % buildingColors.length;
 }

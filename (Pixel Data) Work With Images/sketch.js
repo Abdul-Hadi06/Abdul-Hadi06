@@ -3,12 +3,12 @@ let img;
 let manipulatedImg;
 
 function preload() {
-  img = loadImage('sun.jpg'); // Use your sunset image
+  img = loadImage('sun.jpg');
 }
 
 function setup() {
-  createCanvas(600, 450);
-  manipulatedImg = img.get(); // Copy the image so original remains safe
+  createCanvas(windowWidth, windowHeight);
+  manipulatedImg = img.get();
   manipulatedImg.loadPixels();
 
   for (let i = 0; i < manipulatedImg.pixels.length; i += 4) {
@@ -17,13 +17,13 @@ function setup() {
     let b = manipulatedImg.pixels[i + 2];
 
     // Create a trippy effect by swapping and offsetting channels
-    manipulatedImg.pixels[i]     = b;           // Red becomes Blue
-    manipulatedImg.pixels[i + 1] = r * 0.8;     // Green becomes soft Red
-    manipulatedImg.pixels[i + 2] = g * 1.2;     // Blue becomes brighter Green
+    manipulatedImg.pixels[i]     = b;
+    manipulatedImg.pixels[i + 1] = r * 0.8;
+    manipulatedImg.pixels[i + 2] = g * 1.2;
   }
 
   manipulatedImg.updatePixels();
-  noLoop(); // Static image
+  noLoop();
 }
 
 function draw() {

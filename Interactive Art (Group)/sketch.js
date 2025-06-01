@@ -16,7 +16,7 @@ function setup() {
   for (let i = 0; i < 3; i++) shootingStars.push(new ShootingStar());
 
   let fullText = phrases.join("");
-  let spacing = 18; // <-- Spacing set to 18 as requested
+  let spacing = 18;
   let centerX = width / 2;
   let totalWidth = fullText.length * spacing;
   let startX = centerX - totalWidth / 2;

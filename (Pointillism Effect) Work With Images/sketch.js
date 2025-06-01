@@ -6,8 +6,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 450);
-  image(img, 0, 0, width, height); // Optional base image
+  createCanvas(600, 600);
+  image(img, 0, 0, width, height);
   noStroke();
   frameRate(120);
 }
@@ -18,7 +18,7 @@ function draw() {
     let y = floor(random(img.height));
     let c = img.get(x, y);
 
-    let dotSize = random(2, 5); // Small dots for fine pointillism
+    let dotSize = random(2, 5);
     fill(c);
     ellipse(x, y, dotSize, dotSize);
   }

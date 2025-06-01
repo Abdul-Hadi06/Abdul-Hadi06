@@ -4,7 +4,7 @@ let alienY = 0;
 let alienDirection = 1;
 
 function setup() {
-  createCanvas(600, 450);
+  createCanvas(windowWidth, windowHeight);
   
   // Generate stars
   for (let i = 0; i < 100; i++) {

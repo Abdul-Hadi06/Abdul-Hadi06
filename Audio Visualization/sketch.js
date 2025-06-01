@@ -31,7 +31,7 @@ function setWarmGradientBackground() {
   // Vertical gradient from deep red to orange-yellow
   for (let y = 0; y < height; y++) {
     let inter = map(y, 0, height, 0, 1);
-    let c = lerpColor(color(15, 90, 80), color(40, 90, 90), inter); // Red to bright orange
+    let c = lerpColor(color(15, 90, 80), color(40, 90, 90), inter);
     stroke(c);
     line(0, y, width, y);
   }
@@ -45,7 +45,7 @@ function drawWarmPulsingCircles(level) {
   translate(width / 2, height / 2);
 
   for (let i = 5; i > 0; i--) {
-    stroke((frameCount * 4 + i * 35) % 50 + 10, 90, 90, alpha / i); // hues between 10-60 (warm)
+    stroke((frameCount * 4 + i * 35) % 50 + 10, 90, 90, alpha / i);
     ellipse(0, 0, maxRadius * i * 0.6, maxRadius * i * 0.6);
   }
 
@@ -57,7 +57,7 @@ function drawWarmWaveformShape() {
   strokeWeight(4);
   beginShape();
   noFill();
-  stroke(30, 90, 95); // bright orange-yellow
+  stroke(30, 90, 95);
   for (let i = 0; i < waveform.length; i++) {
     let x = map(i, 0, waveform.length, 0, width);
     let y = map(waveform[i], -1, 1, height * 0.6, height * 0.4);
@@ -74,7 +74,7 @@ function drawWarmFrequencyBars() {
   for (let i = 0; i < spectrum.length; i += 10) {
     let freqValue = spectrum[i];
     let h = map(freqValue, 0, 255, 0, height / 3);
-    fill((i * 3 + frameCount) % 50 + 10, 90, 95); // warm hues cycling 10-60
+    fill((i * 3 + frameCount) % 50 + 10, 90, 95);
     rect(i * binWidth, height, binWidth * 9, -h);
   }
 }

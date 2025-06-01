@@ -48,7 +48,7 @@ function draw() {
 
 // Gradient dark sky background with subtle animated nebula blobs & twinkling stars
 function drawBackground() {
-  // Gradient background (top dark blue to near black bottom)
+  // Gradient background
   for (let y = 0; y < height; y++) {
     let inter = map(y, 0, height, 0, 1);
     let c = lerpColor(color(220, 80, 15), color(260, 80, 3), inter);

@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(600, 450);
+  createCanvas(windowWidth, windowHeight);
   for (let i = 0; i < 150; i++) {
     rainDrops.push(new RainDrop());
   }
